@@ -855,6 +855,11 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
+elh@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/elh/-/elh-0.0.4.tgz#ff61a8369acd2948042aa276ab7067307093dcae"
+  integrity sha512-QYKdJQ8KgzYhV5uoYGJw8YAP7UW0WdgsraHTj0+yH1Yy9nB4AY/6UTVdNeD+9f4pQCbuJHEg3csAIwK4kaqrWg==
+
 elliptic@^6.0.0, elliptic@^6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.2.tgz#05c5678d7173c049d8ca433552224a495d0e3762"

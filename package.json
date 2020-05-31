@@ -1,8 +1,8 @@
 {
   "name": "elh",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "endtag less html",
-  "main": "lib/index.js",
+  "main": "lib",
   "author": "diaphragm",
   "license": "MIT",
   "repository": {
@@ -12,10 +12,5 @@
   "bugs": {
     "url": "https://github.com/diaphragm/elh/issues"
   },
-  "homepage": "https://github.com/diaphragm/elh#readme",
-  "devDependencies": {
-    "html-loader": "^1.1.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
-  }
+  "homepage": "https://github.com/diaphragm/elh#readme"
 }

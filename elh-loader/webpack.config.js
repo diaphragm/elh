@@ -12,7 +12,7 @@ module.exports = {
       { test: /\.elh$/, use: [
         'html-loader',
         {
-          loader: path.resolve(__dirname, 'lib/'),
+          loader: path.resolve(__dirname, 'index.js'),
           options: {}
         }
       ]}

@@ -1,4 +1,4 @@
-const elh = require('../lib')
+import elh from '../lib/index.js'
 
 const s1 = `
 <template>
