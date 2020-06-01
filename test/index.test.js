@@ -241,7 +241,15 @@ const s12 = `
 <div>
   aaa
 `
+const s13 = `
+<v-toolbar >
+  <v-app-bar-nav-icon> ←閉じタグは勝手に入れてほしい
+  <v-spacer />
+  <v-toolbar-title>Title</v-toolbar-title>
+  <v-spacer />
 
+  <v-btn icon> <v-icon> mdi-magnify ←タグ間にスペース入ってても無視してほしい
 
+`
 
 console.log(elh(s11))
