@@ -232,6 +232,7 @@ const s11 = `
   テキストノード出現後はlineDepthを無視するとか
   <div>こういのはべつにいいかな<p>
     あいうえお
+  <div>いじわるな<v-comp />かんじで
 `
 
 const s12 = `
@@ -252,4 +253,4 @@ const s13 = `
 
 `
 
-console.log(elh(s13))
+console.log(elh(s11))
