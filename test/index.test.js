@@ -1,24 +1,26 @@
 const assert = require('assert')
 const elh = require('../lib')
 
+const elhAssert = (actual, expect) => {
+  it('should be equal', () => {
+    assert.equal(elh(actual).trim(), expect.trim())
+  })
+}
+
 describe('Template', () => {
-it('should be equal', () => {
-assert.equal(elh(`
+elhAssert(`
 <div>
   <p>HELLO
-`).trim(), `
+`, `
 <div>
   <p>
     HELLO
   </p>
-</div>`
-.trim())
-  })
-})
+</div>
+`)})
 
 describe('vuetify', () => {
-it('should be equal', () => {
-assert.equal(elh(`
+elhAssert(`
 <v-app>
   <v-app-bar>
     <titel> TITEL
@@ -31,7 +33,7 @@ assert.equal(elh(`
           <v-btn><v-icon> WORLD!
   <v-footer>
     FOOTER
-`).trim(), `
+`, `
 <v-app>
   <v-app-bar>
     <titel>
@@ -62,11 +64,10 @@ assert.equal(elh(`
     FOOTER
   </v-footer>
 </v-app>
-`.trim())})})
+`)})
 
 describe('with attribute', () => {
-  it('should be equal', () => {
-    assert.equal(elh(`
+elhAssert(`
 <v-app>
   <v-app-bar app="app" dense="dense" flat="flat">
     <img src="@/assets/images/logo.svg" />
@@ -83,7 +84,7 @@ describe('with attribute', () => {
     <v-layout justify-center="justify-center">
       <p class="footer-copyright">
         Copyright &copy; 2015 aaa ights reserved.
-`).trim(), `
+`, `
 <v-app>
   <v-app-bar app="app" dense="dense" flat="flat">
     <img src="@/assets/images/logo.svg" />
@@ -115,19 +116,16 @@ describe('with attribute', () => {
     </v-layout>
   </v-footer>
 </v-app>
-`.trim())
-  })
-})
+`)})
 
 describe('self closing tag', () => {
-it('should be equal', () => {
-assert.equal(elh(`
+elhAssert(`
 <v-app>
   <v-app-bar app="app" dense="dense" flat="flat">
     <img src="@/assets/images/logo.svg" />
     <img src="@/assets/images/hoge.svg" />
   <v-content class="default-background-color">
-`).trim(), `
+`, `
 <v-app>
   <v-app-bar app="app" dense="dense" flat="flat">
     <img src="@/assets/images/logo.svg" />
@@ -136,20 +134,17 @@ assert.equal(elh(`
   <v-content class="default-background-color">
   </v-content>
 </v-app>
-`.trim())
-  })
-})
+`)})
 
 describe('quote', () => {
-it('should be equal', () => {
-assert.equal(elh(`
+elhAssert(`
 <body>
   hello
   <div onclick="alert(1 < 2)">
     bbb
   <div onclick="alert(1 > 2)">
     aaa
-`).trim(), `
+`, `
 <body>
   hello
   <div onclick="alert(1 < 2)">
@@ -159,13 +154,10 @@ assert.equal(elh(`
     aaa
   </div>
 </body>
-`.trim())
-  })
-})
+`)})
 
 describe('preformed', () => {
-it('should be equal', () => {
-assert.equal(elh(`
+elhAssert(`
 <body>
   <pre>
     <samp>あなたは、ある大きな白い家の玄関の前に立っています。
@@ -178,7 +170,7 @@ assert.equal(elh(`
 
     ></samp>
   プレ終了
-`).trim(), `
+`, `
 <body>
   <pre>
     <samp>あなたは、ある大きな白い家の玄関の前に立っています。
@@ -193,13 +185,10 @@ assert.equal(elh(`
   </pre>
   プレ終了
 </body>
-`.trim())
-  })
-})
+`)})
 
 describe('inline nest', () => {
-it('should be equal', () => {
-assert.equal(elh(`
+elhAssert(`
 <root>
   <div>これは書きたい
   <div0><div1><div2><p>
@@ -212,7 +201,7 @@ assert.equal(elh(`
     あいうえお
   <div>SELF<v-comp />CLOSING
   <div>  WITH  !<v-comp /> SPACING
-`).trim(), `
+`, `
 <root>
   <div>
     これは書きたい
@@ -259,6 +248,4 @@ assert.equal(elh(`
      SPACING
   </div>
 </root>
-`.trim())
-  })
-})
+`)})
