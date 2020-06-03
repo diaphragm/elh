@@ -157,33 +157,59 @@ elhAssert(`
 `)})
 
 describe('preformed', () => {
-elhAssert(`
+  elhAssert(`
 <body>
   <pre>
-    <samp>あなたは、ある大きな白い家の玄関の前に立っています。
-    目の前に小さな郵便受けがあります。
+    <samp>AAAAAAAAAAAAAAAAAAAAAAAA
+    BBBBBBBBBBBBBBBBBBBB
 
-    ></samp> <kbd>open mailbox</kbd>
+    ></samp> <foo>CCCCCCCCCCCC</foo>
 
-      <samp>郵便受けを開けました:
-    一枚のチラシがあります。
+        <samp> INDENTED
+    DDDDDDDDD
 
     ></samp>
-  プレ終了
+  ENDENDEND
 `, `
 <body>
   <pre>
-    <samp>あなたは、ある大きな白い家の玄関の前に立っています。
-    目の前に小さな郵便受けがあります。
+    <samp>AAAAAAAAAAAAAAAAAAAAAAAA
+    BBBBBBBBBBBBBBBBBBBB
 
-    ></samp> <kbd>open mailbox</kbd>
+    ></samp> <foo>CCCCCCCCCCCC</foo>
 
-      <samp>郵便受けを開けました:
-    一枚のチラシがあります。
+        <samp> INDENTED
+    DDDDDDDDD
 
     ></samp>
   </pre>
-  プレ終了
+  ENDENDEND
+</body>
+`)})
+
+describe('line nested preformed', () => {
+elhAssert(`
+<body>
+  <div1><div2>PREFORMED<pre>
+    <samp>
+      AAAAAAAAAAAAAAAAAAAAAAAA
+      BBBBBBBBBBBBBBBBBBBB
+    </samp>
+  END
+`, `
+<body>
+  <div1>
+    <div2>
+      PREFORMED
+      <pre>
+        <samp>
+          AAAAAAAAAAAAAAAAAAAAAAAA
+          BBBBBBBBBBBBBBBBBBBB
+        </samp>
+      </pre>
+    </div2>
+  </div1>
+  END
 </body>
 `)})
 
