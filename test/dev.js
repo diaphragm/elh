@@ -27,4 +27,12 @@ a.push(`
   END
 `)
 
+a.push(`
+<v-app>
+  <v-app-bar app="app" dense="dense" flat="flat">
+    <img src="@/assets/images/logo.svg" />
+    <img src="@/assets/images/hoge.svg" />
+  <v-content class="default-background-color">
+`)
+
 a.forEach(s => console.log(elh(s)))

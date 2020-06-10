@@ -275,3 +275,49 @@ elhAssert(`
   </div>
 </root>
 `)})
+
+describe('List', () => {
+  elhAssert(`
+<div>
+  <ul>
+    <li> AAA
+    <li> BBB
+    <li> CCC
+    <li> DDD
+`, `
+<div>
+  <ul>
+    <li>
+       AAA
+    </li>
+    <li>
+       BBB
+    </li>
+    <li>
+       CCC
+    </li>
+    <li>
+       DDD
+    </li>
+  </ul>
+</div>
+`)
+})
+
+describe('last non self close tag closing', () => {
+  elhAssert(`
+<div>
+  <v-divider>
+  <v-divider>
+  <v-divider>
+`, `
+<div>
+  <v-divider>
+  </v-divider>
+  <v-divider>
+  </v-divider>
+  <v-divider>
+  </v-divider>
+</div>
+`)
+})
