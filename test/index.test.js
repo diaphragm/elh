@@ -173,15 +173,15 @@ describe('preformed', () => {
 `, `
 <body>
   <pre>
-    <samp>AAAAAAAAAAAAAAAAAAAAAAAA
-    BBBBBBBBBBBBBBBBBBBB
+<samp>AAAAAAAAAAAAAAAAAAAAAAAA
+BBBBBBBBBBBBBBBBBBBB
 
-    ></samp> <foo>CCCCCCCCCCCC</foo>
+></samp> <foo>CCCCCCCCCCCC</foo>
 
-        <samp> INDENTED
-    DDDDDDDDD
+    <samp> INDENTED
+DDDDDDDDD
 
-    ></samp>
+></samp>
   </pre>
   ENDENDEND
 </body>
@@ -202,10 +202,10 @@ elhAssert(`
     <div2>
       PREFORMED
       <pre>
-        <samp>
-          AAAAAAAAAAAAAAAAAAAAAAAA
-          BBBBBBBBBBBBBBBBBBBB
-        </samp>
+<samp>
+  AAAAAAAAAAAAAAAAAAAAAAAA
+  BBBBBBBBBBBBBBBBBBBB
+</samp>
       </pre>
     </div2>
   </div1>
