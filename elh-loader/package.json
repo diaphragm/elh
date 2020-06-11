@@ -1,6 +1,6 @@
 {
   "name": "elh-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "elh-loader for webpack",
   "main": "index.js",
   "author": "diaphragm",
@@ -19,6 +19,6 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "elh": "^0.0.4"
+    "elh": "^0.0.5"
   }
 }
